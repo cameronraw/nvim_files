@@ -50,13 +50,19 @@ return require('packer').startup(function(use)
     }
 
     use {
-        'mfussenegger/nvim-dap'
+        'mfussenegger/nvim-dap',
+        'williamboman/mason.nvim',
     }
 
     use {
         'nvim-lualine/lualine.nvim',
         requires = { 'kyazdani42/nvim-web-devicons', opt = true }
     }
+
+    use('theHamsta/nvim-dap-virtual-text')
+    use('nvim-telescope/telescope-dap.nvim')
+
+    use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
 
 end)
 
